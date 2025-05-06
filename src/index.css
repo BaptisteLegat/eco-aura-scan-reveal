@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 72 33% 97%;
+    --foreground: 110 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 110 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 110 20% 10%;
+
+    --primary: 95 30% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 82 41% 56%;
+    --secondary-foreground: 110 20% 10%;
+
+    --muted: 60 33% 91%;
+    --muted-foreground: 110 10% 40%;
+
+    --accent: 164 28% 41%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 78 30% 85%;
+    --input: 78 30% 85%;
+    --ring: 95 30% 53%;
+
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-eco-offwhite text-foreground font-sans;
+  }
+
+  .eco-card {
+    @apply bg-white rounded-2xl shadow-md p-5 border border-eco-beige/30;
+  }
+
+  .eco-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .eco-button {
+    @apply px-6 py-3 bg-eco-green text-white rounded-full font-medium hover:bg-eco-teal eco-transition shadow-md flex items-center justify-center gap-2;
+  }
+  
+  .eco-mascot {
+    @apply animate-float;
+  }
+
+  .question-card {
+    @apply eco-card mb-6;
+  }
+
+  .answer-option {
+    @apply border border-eco-beige p-4 rounded-xl flex items-center gap-3 cursor-pointer eco-transition hover:bg-eco-beige/20;
+  }
+
+  .answer-option.selected {
+    @apply bg-eco-lightGreen/20 border-eco-green;
+  }
+}
+
